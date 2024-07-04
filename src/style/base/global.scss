@@ -1,0 +1,100 @@
+@use "resolutions" as *;
+@use "fonts" as *;
+
+:root {
+  --c-blue: #345ff6;
+  --c-gunmetal: #253347;
+  --c-darkElectricBlue: #5e6e85;
+  --c-borderColor: #d8e2e7;
+  --c-pureWhite: #ffffff;
+
+  /* Heading */
+  --h-f-xl: 6.4rem;
+  --h-f-l: 4.8rem;
+  --h-f-m: 2.4rem;
+  --h-f-s: 2rem;
+
+  /* Heading Line Height */
+  --h-lh: 110%;
+
+  /* Body */
+  --b-f-m: 1.6rem;
+  --b-f-s: 1.4rem;
+
+  /* Body Line Height */
+  --b-lh: 150%;
+
+  /* Fonts Family */
+  --f-family: "Inter", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+  text-decoration: none;
+  list-style: none;
+}
+
+html {
+  font-size: 62.5%; //10px/16px = 62.5%, 1rem = 10px;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  line-height: var(--b-lh);
+  font-family: var(--f-family);
+  font-size: var(--b-f-m);
+  font-weight: 400;
+  background-color: var(--c-pureWhite);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+  line-height: var(--h-lh);
+}
+
+h1 {
+  font-size: var(--h-f-xl);
+}
+h2 {
+  font-size: var(--h-f-l);
+}
+h3 {
+  font-size: var(--h-f-m);
+}
+h4 {
+  font-size: var(--h-f-s);
+}
+
+.wrapper {
+  width: min(1160px, calc(100% - 48px));
+  margin-inline: auto;
+}
+
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+textarea,
+button,
+select {
+  font: inherit;
+}
