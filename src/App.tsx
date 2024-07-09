@@ -1,9 +1,10 @@
 import "./style/App.scss";
+import Hero from "./components/Hero";
 
 function App() {
   return (
     <>
-      <h1>BMI Calculator</h1>
+      <Hero />
     </>
   );
 }
