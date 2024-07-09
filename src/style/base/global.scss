@@ -54,6 +54,13 @@ body {
   font-size: var(--b-f-m);
   font-weight: 400;
   background-color: var(--c-pureWhite);
+  color: var(--c-darkElectricBlue);
+}
+
+span {
+  display: inline-block;
+  color: var(--c-gunmetal);
+  line-height: var(--b-lh);
 }
 
 h1,
@@ -64,10 +71,15 @@ h5,
 h6 {
   font-weight: 600;
   line-height: var(--h-lh);
+  color: var(--c-gunmetal);
 }
 
 h1 {
-  font-size: var(--h-f-xl);
+  font-size: var(--h-f-l);
+
+  @include desktopSmall {
+    font-size: var(--h-f-xl);
+  }
 }
 h2 {
   font-size: var(--h-f-l);
@@ -82,6 +94,14 @@ h4 {
 .wrapper {
   width: min(1160px, calc(100% - 48px));
   margin-inline: auto;
+
+  @include tablet {
+    width: min(1160px, calc(100% - 82px));
+  }
+
+  @include desktopSmall {
+    width: min(1160px, calc(100% - 140px));
+  }
 }
 
 img,
