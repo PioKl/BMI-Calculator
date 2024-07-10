@@ -1,0 +1,37 @@
+@use "./base/resolutions.scss" as *;
+
+.healthySolutionsContainer {
+  background: linear-gradient(
+    290deg,
+    rgba(214, 230, 254, 0.25) 0%,
+    rgba(214, 230, 254, 0) 100%
+  );
+  padding-block: 5.6rem;
+  margin-bottom: 7.2rem;
+
+  @include tablet {
+    padding-block: 6rem;
+    margin-bottom: 9.6rem;
+  }
+
+  @include desktopSmall {
+    padding-top: 7.2rem;
+    padding-bottom: 9.6rem;
+    margin-bottom: 12rem;
+  }
+
+  @include desktopSmall {
+    border-radius: 35px;
+    margin-inline: 2.4rem;
+  }
+
+  &__itemList {
+    display: grid;
+    row-gap: 4rem;
+
+    @include desktopSmall {
+      display: flex;
+      column-gap: 3.2rem;
+    }
+  }
+}
