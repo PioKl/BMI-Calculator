@@ -6,6 +6,12 @@
   padding-bottom: 7.2rem;
   position: relative;
 
+  @include desktopSmall {
+    height: 70.7rem;
+    padding-bottom: 0;
+    margin-bottom: 6.5rem;
+  }
+
   &__container {
     position: relative;
     z-index: 2;
@@ -30,7 +36,7 @@
       rgba(213.73, 251.53, 253.94, 0) 100%
     );
     width: 100%;
-    height: 75%;
+    height: 58%;
     top: 0;
     position: absolute;
     z-index: 1;
@@ -39,10 +45,13 @@
     border-bottom-left-radius: 35px;
     border-bottom-right-radius: 35px;
 
+    @include tablet {
+      height: 64rem;
+    }
+
     @include desktopSmall {
       width: 63.5%;
-      //height: 80%;
-      height: 70.7rem;
+      height: 100%;
       left: 2.4rem;
     }
   }
