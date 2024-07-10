@@ -1,0 +1,14 @@
+@use "resolutions" as *;
+
+@mixin wrapper {
+  width: min(1160px, calc(100% - 48px));
+  margin-inline: auto;
+
+  @include tablet {
+    width: min(1160px, calc(100% - 82px));
+  }
+
+  @include desktopSmall {
+    width: min(1160px, calc(100% - 140px));
+  }
+}
