@@ -1,0 +1,27 @@
+@use "./base/resolutions.scss" as *;
+.healthySolutionItem {
+  display: grid;
+  row-gap: 3.2rem;
+
+  @include tablet {
+    display: flex;
+    column-gap: 4rem;
+  }
+
+  @include desktopSmall {
+    row-gap: 4.5rem;
+  }
+
+  @include desktopSmall {
+    display: grid;
+  }
+
+  &__solution {
+    display: grid;
+    row-gap: 2.4rem;
+  }
+
+  &__heading {
+    letter-spacing: var(--ltr-spc);
+  }
+}
