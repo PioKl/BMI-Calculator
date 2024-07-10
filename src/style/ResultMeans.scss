@@ -1,0 +1,48 @@
+@use "./base/resolutions.scss" as *;
+@use "./base/mixins" as *;
+
+.resultMeansContainer {
+  margin-bottom: 7.161rem;
+
+  @include tablet {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    margin-bottom: 9.6rem;
+  }
+
+  @include desktopSmall {
+    @include wrapper;
+    column-gap: 13.1rem;
+  }
+}
+.resultMeansImageContainer {
+  margin-bottom: 4.8rem;
+
+  @include tablet {
+    min-height: 41.1rem;
+    max-height: 53.3rem;
+    margin-bottom: 0;
+  }
+
+  &__img {
+    @include tablet {
+      min-height: inherit;
+      max-height: inherit;
+      object-fit: cover;
+    }
+  }
+}
+
+.resultMeansInfoContainer {
+  @include wrapper;
+
+  @include desktopSmall {
+    width: auto;
+  }
+  &__heading {
+    margin-bottom: 3.2rem;
+    font-size: 3.2rem;
+    letter-spacing: var(--ltr-spc);
+  }
+}
