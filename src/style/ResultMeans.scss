@@ -39,10 +39,33 @@
 
   @include desktopSmall {
     width: auto;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 105%;
+      right: 15%;
+      width: 8.5rem;
+      height: 12rem;
+      background-image: url("../assets/images/pattern-curved-line-left.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+
+  @include desktop {
+    &::before {
+      height: 20rem;
+    }
   }
   &__heading {
     margin-bottom: 3.2rem;
     font-size: 3.2rem;
     letter-spacing: var(--ltr-spc);
+
+    @include desktopSmall {
+      font-size: var(--h-f-l);
+    }
   }
 }
