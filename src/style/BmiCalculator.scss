@@ -36,6 +36,10 @@
 
   &__radioInputContainer {
     width: 50%;
+
+    @include desktopSmall {
+      cursor: pointer;
+    }
   }
 
   &__resultContainer {
@@ -186,6 +190,19 @@
     letter-spacing: -0.05em;
     border: 1px solid var(--c-borderColor);
     border-radius: 1.2rem;
+
+    &:hover,
+    &:focus {
+      border-color: var(--c-blue);
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &:focus {
+      outline: none;
+    }
   }
 }
 
@@ -273,4 +290,8 @@ input[type="number"]::-webkit-inner-spin-button {
   top: 0;
   right: 0;
   height: 100%;
+}
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
 }
