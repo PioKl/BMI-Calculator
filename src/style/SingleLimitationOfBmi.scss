@@ -1,0 +1,27 @@
+@use "./base/resolutions.scss" as *;
+
+.limitationOfBmiContainer {
+  display: grid;
+  row-gap: 1.6rem;
+  padding: 2.4rem;
+  text-align: left;
+  background-color: var(--c-pureWhite);
+  box-shadow: 16px 32px 56px rgba(143.3, 174.28, 207.19, 0.25);
+  border-radius: 16px;
+
+  @include tablet {
+    grid-column: span 2;
+    padding: 3.2rem;
+  }
+
+  @include desktopSmall {
+    display: flex;
+    flex-direction: column;
+    grid-column: auto;
+  }
+}
+.limitationOfBmiIconContainer {
+  display: flex;
+  align-items: center;
+  column-gap: 1.6rem;
+}
