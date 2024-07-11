@@ -7,6 +7,7 @@ import SingleHealthySolution from "./SingleHealthySolution";
 export default function HealthySolutions() {
   return (
     <section className="healthySolutionsContainer">
+      <div className="healthySolutionsContainer__background"></div>
       <ul className="wrapper healthySolutionsContainer__itemList">
         <SingleHealthySolution
           name={"eating"}
